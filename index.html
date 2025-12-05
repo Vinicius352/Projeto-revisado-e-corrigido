@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Tec</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="CSS/carrossel.css">
+</head>
+<body>
+    <header> 
+        <div id="logo"><img src="imagens/logo.png" alt="">
+
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#">Soluções</a>
+            <a href="#">Contatos</a>
+        </nav>
+    </header>
+
+    <section>
+        <div class="box4">
+            <div class="carousel" aria-label="Carrossel de imagens">
+  <!-- inputs que controlam o slide -->
+  <input type="radio" name="carousel" id="s1" checked>
+  <input type="radio" name="carousel" id="s2">
+  <input type="radio" name="carousel" id="s3">
+  <input type="radio" name="carousel" id="s4">
+
+  <!-- viewport / área visível -->
+  <div class="viewport" style="position:relative; width:100%; height:100%;">
+    <div class="slides" role="list">
+      <div class="slide" role="listitem">
+        <img src="imagens/foto1.png" alt="Imagem 1">
+        </div>
+      <div class="slide" role="listitem">
+        <img src="imagens/foto2.png" alt="Imagem 2">
+      </div>
+      <div class="slide" role="listitem">
+        <img src="imagens/foto3.png" alt="Imagem 3">
+      </div>
+      <div class="slide" role="listitem">
+        <img src="imagens/foto4.png" alt="Imagem 4">
+      </div>
+    </div>
+
+    <!-- controles Prev/Next — cada label aponta para o radio alvo correspondente -->
+    <div class="controls">
+      <!-- controles visíveis apenas quando o slide correspondente estiver ativo (ver CSS) -->
+      <!-- Slide 1: prev -> s4 (loop), next -> s2 -->
+      <label class="nav-button prev prev1" for="s4" aria-hidden="false" title="Anterior">&#10094;</label>
+      <label class="nav-button next next1" for="s2" title="Próximo">&#10095;</label>
+
+      <!-- Slide 2: prev -> s1, next -> s3 -->
+      <label class="nav-button prev prev2" for="s1" title="Anterior">&#10094;</label>
+      <label class="nav-button next next2" for="s3" title="Próximo">&#10095;</label>
+
+      <!-- Slide 3: prev -> s2, next -> s4 -->
+      <label class="nav-button prev prev3" for="s2" title="Anterior">&#10094;</label>
+      <label class="nav-button next next3" for="s4" title="Próximo">&#10095;</label>
+
+      <!-- Slide 4: prev -> s3, next -> s1 (loop) -->
+      <label class="nav-button prev prev4" for="s3" title="Anterior">&#10094;</label>
+      <label class="nav-button next next4" for="s1" title="Próximo">&#10095;</label>
+    </div>
+
+    <!-- dots -->
+    <div class="dots" role="tablist" aria-label="Navegação por slides">
+      <label for="s1" role="tab" aria-controls="s1" title="Slide 1"></label>
+      <label for="s2" role="tab" aria-controls="s2" title="Slide 2"></label>
+      <label for="s3" role="tab" aria-controls="s3" title="Slide 3"></label>
+      <label for="s4" role="tab" aria-controls="s4" title="Slide 4"></label>
+    </div>
+  </div>
+</div>
+        </div>
+    </section>
+
+    <section>
+        <div class="box4menor"> 
+          
+        <p>A Alpha Tec é uma empresa especializada em soluções tecnológicas desenvolvidas para facilitar processos, otimizar resultados e impulsionar o crescimento de pessoas e empresas. Nosso compromisso é entregar inovação de forma simples, prática e eficiente, oferecendo suporte completo em tecnologia para diversos tipos de necessidades.
+
+Com uma equipe qualificada e focada em resultados, a Alpha Tec trabalha com desenvolvimento de sistemas, consultoria em TI, manutenção de computadores, automação de processos e criação de soluções personalizadas. Nosso objetivo é conectar tecnologia e eficiência, garantindo que cada cliente tenha exatamente o que precisa para evoluir no mercado atual.
+
+Mais do que uma prestadora de serviços, a Alpha Tec é uma parceira estratégica. Atuamos de forma transparente, ágil e comprometida com a qualidade, sempre buscando novas formas de melhorar a experiência dos nossos clientes por meio da tecnologia.
+
+Na Alpha Tec, acreditamos que a inovação não precisa ser complicada — ela precisa ser útil. Por isso, entregamos soluções inteligentes que transformam desafios em oportunidades.</p> </div>
+    </section>
+
+    <section>
+        <div class="box_descricao"></div>
+        <div class="box3"> 
+          <p>A Alpha Tec é uma empresa com 8 anos de atuação no mercado, construída com dedicação, inovação e compromisso em cada etapa de sua trajetória. Desde o início, trabalhamos para oferecer soluções tecnológicas eficientes e acessíveis, sempre acompanhando as mudanças do setor e evoluindo junto com as necessidades dos nossos clientes. Esse tempo de experiência fortaleceu nossa identidade e nos fez conquistar confiança, estabilidade e reconhecimento na área.
+
+Nosso maior diferencial está na nossa equipe. Contamos com profissionais altamente capacitados, qualificados e preparados para lidar com diferentes desafios tecnológicos. Cada colaborador passa por treinamentos constantes e acompanha as tendências mais recentes do mercado, garantindo que nossos serviços sejam sempre modernos, seguros e eficientes. Essa combinação de experiência e conhecimento técnico nos permite entregar resultados consistentes e manter o padrão de qualidade que define a Alpha Tec ao longo desses 8 anos.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="box7"><img src="imagens/foto6.png" alt=""></div>
+        <div class="box8"><img src="imagens/foto7.png" alt=""></div>
+        <div class="box9"><img src="imagens/foto8.png" alt=""></div>
+        <div class="box002"><img src="imagens/foto9.png" alt=""></div>
+    </section>
+    <section class="map-text-container">
+    
+    <div class="map-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1764437049465!6m8!1m7!1s_RC5IUu7oJ8SNNyMQlUK3A!2m2!1d-8.055549395137408!2d-34.88394416080736!3f107.58303390135848!4f-0.12296173205439231!5f0.7820865974627469"
+            allowfullscreen="" loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="text-box">
+        <p>A Alpha Tec possui uma sede muito bem localizada, escolhida estrategicamente para oferecer praticidade e acessibilidade a 
+          todos que utilizam nossos serviços. Situada em uma área central e de fácil acesso, nossa localização facilita o deslocamento
+           de clientes, parceiros e colaboradores, tornando cada visita mais rápida e conveniente. Além disso, estar próxima a pontos 
+           importantes da cidade reforça nossa presença no setor tecnológico e nos mantém conectados ao que acontece ao nosso redor. 
+           Nosso espaço foi planejado para ser moderno, funcional e acolhedor. Contamos com um ambiente organizado que garante conforto 
+           durante atendimentos, reuniões e o trabalho diário da equipe. A estrutura física, combinada com a boa localização, contribui 
+           para um fluxo de trabalho mais eficiente e para uma experiência positiva de quem chega até nós. Essa posição estratégica 
+           fortalece nosso compromisso com a qualidade, a agilidade e a proximidade com quem confia na Alpha Tec.</p>
+    </div>
+
+</section>
+  <footer>&copy; Copyright 2025 - Todos os direitos estão reservados</footer>
+
+</body>
+</html>

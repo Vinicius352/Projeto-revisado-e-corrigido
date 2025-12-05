@@ -1,0 +1,156 @@
+  :root{
+    --w: 100%;
+    --h: 100%;
+    --slides: 4; /* atualize se alterar número de slides */
+  }
+
+  *{box-sizing:border-box}
+
+  body{
+    font-family:Arial; 
+    display:flex; 
+    align-items:center; justify-content:center; 
+    padding:30px; 
+    background:#1075f8ce;
+    flex-direction: column;
+}
+
+  .carousel{
+    width: var(--w);
+    height: var(--h);
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background:#000;
+    box-shadow: 0 8px 24px rgba(0,0,0,.15);
+  }
+
+  .carousel img{
+     width: 1300px;
+    height: 270px;
+  }
+  /* radios (controladores) */
+  .carousel input[type="radio"]{
+    position: absolute;
+    left: -9999px;
+  }
+
+  /* wrapper que contém as slides em linha */
+  .slides{
+    display: flex;
+    width: calc(var(--w) * var(--slides));
+    height: var(--h);
+    transition: transform 0.6s cubic-bezier(.2,.8,.2,1);
+  }
+
+  .slide{
+    width: var(--w);
+    height: var(--h);
+    flex: 0 0 var(--w);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide img{
+    object-fit: cover;
+    display:block;
+  }
+
+  /* posição por radio */
+  #s1:checked ~ .viewport .slides { transform: translateX(0); }
+  #s2:checked ~ .viewport .slides { transform: translateX(calc(-1 * var(--w))); }
+  #s3:checked ~ .viewport .slides { transform: translateX(calc(-2 * var(--w))); }
+  #s4:checked ~ .viewport .slides { transform: translateX(calc(-3 * var(--w))); }
+  /* se precisar mais slides, adicione regras equivalentes */
+
+  /* botões Prev / Next - invisíveis por padrão; exibidos apenas quando o slide correspondente estiver ativo */
+  .nav-button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    background: rgba(0,0,0,.5);
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1;
+    border: 0;
+    -webkit-tap-highlight-color: transparent;
+    opacity: .95;
+  }
+  .nav-button:active{ transform: translateY(-50%) scale(.98); }
+
+  .prev { left: 14px; }
+  .next { right: 14px; }
+
+  /* labels de navegação por slide (visíveis apenas quando aquele slide está ativo) */
+  /* slide 1 */
+  #s1:checked ~ .viewport .controls .prev1,
+  #s1:checked ~ .viewport .controls .next1 { display: flex; }
+  /* slide 2 */
+  #s2:checked ~ .viewport .controls .prev2,
+  #s2:checked ~ .viewport .controls .next2 { display: flex; }
+  /* slide 3 */
+  #s3:checked ~ .viewport .controls .prev3,
+  #s3:checked ~ .viewport .controls .next3 { display: flex; }
+  /* slide 4 */
+  #s4:checked ~ .viewport .controls .prev4,
+  #s4:checked ~ .viewport .controls .next4 { display: flex; }
+
+  /* esconder por padrão */
+  .controls .nav-button{ display: none; }
+
+  /* pontos de navegação (dots) */
+  .dots{
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+    display:flex;
+    gap:8px;
+  }
+  .dots label{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background: rgba(255,255,255,.45);
+    cursor:pointer;
+    display:inline-block;
+    transition: transform .18s, background-image .18s;
+    border: 2px solid rgba(0,0,0,.08);
+  }
+  /* dot ativo é destacado pela propriedade :checked sibling */
+  #s1:checked ~ .viewport .dots label[for="s1"],
+  #s2:checked ~ .viewport .dots label[for="s2"],
+  #s3:checked ~ .viewport .dots label[for="s3"],
+  #s4:checked ~ .viewport .dots label[for="s4"]{
+    transform: scale(1.3);
+    background: white;
+  }
+
+  /* acessibilidade visual */
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+  /* legendas exemplo — opcional */
+  .caption{
+    position:absolute;
+    left:20px;
+    bottom:40px;
+    color:#ffffff;
+    text-shadow: 0 6px 24px rgba(0,0,0,.6);
+    font-size:18px;
+    background: rgba(0,0,0,.25);
+    padding:8px 12px;
+    border-radius:6px;
+  }
+
+  /* responsivo simples - mantém proporção mas o usuário pediu tamanho fixo */
+  @media (max-width: 1260px){
+    .carousel{ transform: scale(.9); transform-origin:center; }
+  }
